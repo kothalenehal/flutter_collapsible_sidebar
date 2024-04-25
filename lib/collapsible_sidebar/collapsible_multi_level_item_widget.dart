@@ -1,6 +1,8 @@
 import 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item.dart';
 import 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
 
 class CollapsibleMultiLevelItemWidget extends StatefulWidget {
   const CollapsibleMultiLevelItemWidget({
@@ -111,7 +113,8 @@ class _CollapsibleMultiLevelItemWidgetState
                           leading: subItem.iconImage != null
                               ? CircleAvatar(
                                   radius: widget.iconSize! / 2,
-                                  backgroundImage: subItem.iconImage,
+                            child: SvgPicture.asset(subItem.iconImage!),
+
                                   backgroundColor: Colors.transparent,
                                 )
                               : (subItem.icon != null
