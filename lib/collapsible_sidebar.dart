@@ -8,7 +8,7 @@ import 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item.dart';
 import 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item_selection.dart';
 import 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item_widget.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 export 'package:collapsible_sidebar/collapsible_sidebar/collapsible_item.dart';
 
 class CollapsibleSidebar extends StatefulWidget {
@@ -408,7 +408,7 @@ class _CollapsibleSidebarState extends State<CollapsibleSidebar>
             : item.iconImage != null
                 ? CircleAvatar(
                     radius: widget.iconSize / 2,
-                    backgroundImage: item.iconImage,
+                    child: SvgPicture.asset(item.iconImage!),
                     backgroundColor: Colors.transparent,
                   )
                 : (item.icon != null
