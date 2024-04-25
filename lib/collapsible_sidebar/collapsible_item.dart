@@ -5,7 +5,7 @@ class CollapsibleItem {
     required this.text,
     this.badgeCount,
     this.icon,
-    this.iconPath, // Change this line
+    this.iconImage, // Change this line
     required this.onPressed,
     this.onHold,
     this.isSelected = false,
@@ -15,7 +15,7 @@ class CollapsibleItem {
   final String text;
   int? badgeCount;
   IconData? icon;
-  String? iconPath; // Change this line
+  String? iconImage; // Change this line
   final Function onPressed;
   final Function? onHold;
   bool isSelected;
