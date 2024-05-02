@@ -408,7 +408,7 @@ class _CollapsibleSidebarState extends State<CollapsibleSidebar>
             : item.iconImage != null
                 ? CircleAvatar(
                     radius: widget.iconSize / 2,
-                    child: SvgPicture.asset(item.iconImage!,colorFilter:ColorFilter.mode(item.iconColor ??Color(0xFF8D99AE), BlendMode.srcIn) ,),
+                    child: SvgPicture.asset(item.iconImage!,colorFilter:ColorFilter.mode( item.isSelected ?  Color(0xFF0CB3E0) : Color(0xFF8D99AE), BlendMode.srcIn) ,),
                     backgroundColor: Colors.transparent,
                   )
                 : (item.icon != null
